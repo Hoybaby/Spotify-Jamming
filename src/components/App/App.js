@@ -52,7 +52,20 @@ class App extends React.Component {
       id: 6
     }
   ]
+    };
+
+    this.addTrack = this.addTrack.bind(this);
+  }
+
+  addTrack(track) {
+    let tracks = this.state.playlistTracks;
+    // if our track that we are attempting to pass in is matched up to our savedTrack, it will not doing anything but if it isnt, it will be pushed
+    if(tracks.find(savedTrack => savedTrack.id === track.id)) {
+      return;
     }
+
+    tracks.push(track);
+    this.setState({playlistTracks: tracks})
   }
 
   render() {
@@ -62,7 +75,9 @@ class App extends React.Component {
     <div className="App">
       <SearchBar/>
       <div className="App-playlist">
-        <SearchResults searchResults={this.state.SearchResults}/>
+        <SearchResults searchResults={this.state.SearchResults}
+        onAdd={this.addTrack}
+        />
         <PlayList playlistName={this.state.playlistName} 
         playlistTracks={this.state.playlistTracks}
         />
