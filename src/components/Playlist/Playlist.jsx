@@ -2,7 +2,7 @@ import React from 'react';
 import './Playlist.css';
 
 
-class Playlist extends React.Component {
+class PlayList extends React.Component {
     render() {
         return(
             <div className="Playlist">
@@ -13,3 +13,5 @@ class Playlist extends React.Component {
         )
     }
 }
+
+export default PlayList;
