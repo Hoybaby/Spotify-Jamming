@@ -20,7 +20,7 @@ class Track extends React.Component {
                     <h3>track name  </h3>
                     <p>track artist  | track album </p>
                 </div>
-                <button className="Track-action">+ or - will go here </button>
+                {this.renderAction()}
             </div>
         )
     }

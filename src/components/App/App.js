@@ -4,6 +4,7 @@ import React from 'react';
 
 import SearchBar from '../SearchBar/SearchBar';
 import SearchResults from '../SearchResults/SearchResults';
+import PlayList from '../PlayList/Playlist';
 
 class App extends React.Component {
 
@@ -41,8 +42,8 @@ class App extends React.Component {
     <div className="App">
       <SearchBar/>
       <div className="App-playlist">
-        <SearchResults />
-        {/* <Playlist /> */}
+        <SearchResults SearchResults={this.state.SearchResults}/>
+        <PlayList />
       </div>
     </div>
   </div>
