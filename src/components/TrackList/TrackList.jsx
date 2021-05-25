@@ -1,6 +1,6 @@
 import React from 'react';
 import './TrackList.css';
-import Track from '../Track/Track'
+import Track from '../Track/Track';
 
 class TrackList extends React.Component {
     render() {
@@ -10,7 +10,9 @@ class TrackList extends React.Component {
                     this.props.tracks.map(track => {
                         // in each object, i want to pass down the object into the component with the pop
                         return <Track track={track}
-                                key={track.id}/>
+                                key={track.id}
+                                onAdd={this.props.onAdd}
+                                />
                     })
                 }
             </div>
