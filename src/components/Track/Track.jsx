@@ -11,7 +11,7 @@ class Track extends React.Component {
     }
     
     renderAction() {
-            if(this.props.isRemoval === true) {
+            if(this.props.isRemoval) {
                 return <button className="Track-action">-</button>
             } else {
                 return <button className="Track-action" onClick={this.addTrack}>+</button>
@@ -21,6 +21,11 @@ class Track extends React.Component {
     addTrack() {
         // this is gonna check if the track that we want to add as an id that already exists with our current playlist. If it does, it wont be added, if not it will  and upsdate state.
         this.props.onAdd(this.props.track)
+    }
+
+    removeTrack(){
+        // the onRemove is the one that is filtering the track
+        this.props.onRemove(this.props.track)
     }
     
     
