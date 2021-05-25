@@ -59,6 +59,8 @@ class App extends React.Component {
     this.removeTrack = this.removeTrack.bind(this);
 
     this.updatePlaylistName = this.updatePlaylistName.bind(this);
+
+    this.savePlaylist = this.savePlaylist.bind(this);
   }
 
   addTrack(track) {
@@ -88,7 +90,7 @@ class App extends React.Component {
 
   savePlaylist() {
     // at this moment, my songs do not have uris attached to them but this map function will cycle through and place it in a new array for the uris
-    
+
     const trackUris = this.state.playlistTracks.map(track => track.uri);
   }
 
@@ -106,6 +108,7 @@ class App extends React.Component {
         playlistTracks={this.state.playlistTracks}
         onRemove={this.removeTrack}
         onNameChange={this.updatePlaylistName}
+        onSave={this.savePlaylist}
         />
       </div>
     </div>
