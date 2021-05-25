@@ -90,7 +90,7 @@ class App extends React.Component {
 
   savePlaylist() {
     // at this moment, my songs do not have uris attached to them but this map function will cycle through and place it in a new array for the uris
-
+    alert("this method is linked properly")
     const trackUris = this.state.playlistTracks.map(track => track.uri);
   }
 
