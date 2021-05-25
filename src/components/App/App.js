@@ -57,6 +57,8 @@ class App extends React.Component {
     this.addTrack = this.addTrack.bind(this);
 
     this.removeTrack = this.removeTrack.bind(this);
+
+    this.updatePlaylistName = this.updatePlaylistName.bind(this);
   }
 
   addTrack(track) {
@@ -80,6 +82,16 @@ class App extends React.Component {
 
   }
 
+  updatePlaylistName(name) {
+    this.setState({playlistName: name})
+  }
+
+  savePlaylist() {
+    // at this moment, my songs do not have uris attached to them but this map function will cycle through and place it in a new array for the uris
+    
+    const trackUris = this.state.playlistTracks.map(track => track.uri);
+  }
+
   render() {
     return (
       <div>
@@ -93,6 +105,7 @@ class App extends React.Component {
         <PlayList playlistName={this.state.playlistName} 
         playlistTracks={this.state.playlistTracks}
         onRemove={this.removeTrack}
+        onNameChange={this.updatePlaylistName}
         />
       </div>
     </div>
