@@ -1,7 +1,7 @@
 // Will be using implicit grant flow which will return a user's access token in the url
 
-const clientID=process.env.REACT_APP_CLIENT_ID;
-const redirectUri = 'http://localhost:3000';
+const clientID = process.env.REACT_APP_CLIENT_ID;
+const redirectUri = 'http://localhost:3000/';
 
 let accessToken;
 
@@ -24,7 +24,23 @@ const Spotify = {
             window.setTimeout(() => accessToken ='', expiresIn * 1000);
             window.history.pushState('Access Toekn', null, '/');
             return accessToken
+        } else {
+            const accessUrl = `https://accounts.spotify.com/authorize?client_id=${clientID}&response_type=token&scope=playlist-modify-public&redirect_uri=${redirectUri}`;
+            window.location = accessUrl;
         }
+
+    },
+
+    search(term) {
+        // now we should have access to our token when we search
+        const accessToken = Spotify.getAccessToken();
+        return fetch(`https://api.spotify.com/v1/search?type=track&q=${term}`, { 
+            headers: {
+                Authorization: `Bearer ${accessToken}`
+            }
+        }
+        )
+
     }
 }
 
