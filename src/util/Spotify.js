@@ -1,7 +1,7 @@
 // Will be using implicit grant flow which will return a user's access token in the url
 
 const clientID = '6e1911a8ba9743d3bba98b167a9729aa'
-const redirectUri = 'http://localhost:3000/callback/';
+const redirectUri = 'https://hoybaby.github.io/Spotify-Jamming/';
 let accessToken;
 
 const Spotify = {
