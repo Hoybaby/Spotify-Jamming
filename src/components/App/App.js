@@ -14,46 +14,9 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      SearchResults: [{
-        name: 'name1',
-        artist: 'artist1',
-        album: 'album1',
-        id: 1
-      },
-      {
-        name: 'name2',
-        artist: 'artist2',
-        album: 'album2',
-        id: 2
-      },
-      {
-        name: 'name3',
-        artist: 'artist3',
-        album: 'album3',
-        id: 3
-      },
-      
-    ],
+      SearchResults: [],
     playlistName: 'My Playlist',
-    playlistTracks: [{
-      name: 'playlistName1',
-      artist: 'playlistArtist1',
-      album: 'playlistAlbum1',
-      id: 4
-    },
-    {
-      name: 'playlistName2',
-      artist: 'playlistArtist2',
-      album: 'playlistAlbum2',
-      id: 5
-    },
-    {
-      name: 'playlistName3',
-      artist: 'playlistArtist3',
-      album: 'playlistAlbum3',
-      id: 6
-    }
-  ]
+    playlistTracks: []
     };
 
     this.addTrack = this.addTrack.bind(this);
@@ -96,6 +59,12 @@ class App extends React.Component {
     // at this moment, my songs do not have uris attached to them but this map function will cycle through and place it in a new array for the uris
     alert("this method is linked properly")
     const trackUris = this.state.playlistTracks.map(track => track.uri);
+    Spotify.savePlayList(this.state.playlistName, trackUris).then(() => {
+      this.setState({
+        playlistName: 'New Playlist',
+        playlistTracks: []
+      })
+    })
   }
 
   search(term) {

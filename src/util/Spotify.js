@@ -1,20 +1,19 @@
 // Will be using implicit grant flow which will return a user's access token in the url
 
-const clientID = process.env.REACT_APP_CLIENT_ID;
+const clientID = '6e1911a8ba9743d3bba98b167a9729aa'
 const redirectUri = 'http://localhost:3000/';
-
 let accessToken;
 
 const Spotify = {
     getAccessToken() {
         if(accessToken) {
-            return accessToken
+            return accessToken;
         }
 
 
         // check for access token match
-        const accessToken = window.location.href.match(/access_token=([^&]*)/);
-        const expiresInMatch = windw.location.href.match(/expires_in=([^&]*)/);
+        const accessTokenMatch = window.location.href.match(/access_token=([^&]*)/);
+        const expiresInMatch = window.location.href.match(/expires_in=([^&]*)/);
 
         if(accessTokenMatch && expiresInMatch) {
             accessToken = accessTokenMatch[1];
@@ -22,7 +21,7 @@ const Spotify = {
             
             // we want to clear the parameters from the URL AFTER it expires. it helps prevent errors.
             window.setTimeout(() => accessToken ='', expiresIn * 1000);
-            window.history.pushState('Access Toekn', null, '/');
+            window.history.pushState('Access Tokenn', null, '/');
             return accessToken
         } else {
             const accessUrl = `https://accounts.spotify.com/authorize?client_id=${clientID}&response_type=token&scope=playlist-modify-public&redirect_uri=${redirectUri}`;
@@ -67,7 +66,7 @@ const Spotify = {
             headers: headers
         }).then(response => response.json()).then(
             jsonResponse => {
-                userId = jsonResponse.id
+                userId = jsonResponse.id;
                 return fetch(`https://api.spotify.com/v1/users/${userId}/playlists`), {
                     headers: headers,
                     method: 'POST',
@@ -76,7 +75,7 @@ const Spotify = {
             }).then(response => response.json()).then(
             jsonResponse => {
                 const playlistId = jsonResponse.id;
-                return fetch(`https://api.spotify.com/v1/users/${user_id}/playlists/${playlist_id}/tracks`, {
+                return fetch(`https://api.spotify.com/v1/users/${userId}/playlists/${playlistId}/tracks`, {
                     headers: headers,
                     method: 'POST',
                     body: JSON.stringify({uris: trackUris})
