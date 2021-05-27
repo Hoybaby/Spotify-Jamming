@@ -1,7 +1,7 @@
 // Will be using implicit grant flow which will return a user's access token in the url
 
 const clientID = '6e1911a8ba9743d3bba98b167a9729aa'
-const redirectUri = 'http://localhost:3000/';
+const redirectUri = 'http://localhost:3000/callback/';
 let accessToken;
 
 const Spotify = {
@@ -46,7 +46,7 @@ const Spotify = {
             return jsonResponse.tracks.items.map(track => ({
                 id: track.id,
                 name: track.name,
-                artist:track.artists[0].name,
+                artist: track.artists[0].name,
                 album: track.album.name,
                 uri: track.uri
             }));
@@ -59,7 +59,7 @@ const Spotify = {
         }
 
         const accessToken = Spotify.getAccessToken();
-        const headers = {Authorization: `Bearer ${accessToken}`};
+        const headers = { Authorization: `Bearer ${accessToken}`};
         let userId;
 
         return fetch('https://api.spotify.com/v1/me', {
