@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Spotify-Jamming/static/css/main.e8b247e9.chunk.css",
-    "main.js": "/Spotify-Jamming/static/js/main.48ec87af.chunk.js",
-    "main.js.map": "/Spotify-Jamming/static/js/main.48ec87af.chunk.js.map",
+    "main.js": "/Spotify-Jamming/static/js/main.8abd7169.chunk.js",
+    "main.js.map": "/Spotify-Jamming/static/js/main.8abd7169.chunk.js.map",
     "runtime-main.js": "/Spotify-Jamming/static/js/runtime-main.62bd85c6.js",
     "runtime-main.js.map": "/Spotify-Jamming/static/js/runtime-main.62bd85c6.js.map",
     "static/js/2.760ad2cd.chunk.js": "/Spotify-Jamming/static/js/2.760ad2cd.chunk.js",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.62bd85c6.js",
     "static/js/2.760ad2cd.chunk.js",
     "static/css/main.e8b247e9.chunk.css",
-    "static/js/main.48ec87af.chunk.js"
+    "static/js/main.8abd7169.chunk.js"
   ]
 }
