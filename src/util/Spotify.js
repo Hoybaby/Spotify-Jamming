@@ -1,5 +1,7 @@
 // Will be using implicit grant flow which will return a user's access token in the url
 
+const clientID=process.env.REACT_APP_CLIENT_ID;
+const redirectUri = 'http://localhost:3000';
 
 let accessToken;
 
