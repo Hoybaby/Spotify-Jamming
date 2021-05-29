@@ -1,24 +1,23 @@
 {
   "files": {
-    "main.css": "/Spotify-Jamming/static/css/main.e8b247e9.chunk.css",
-    "main.js": "/Spotify-Jamming/static/js/main.8abd7169.chunk.js",
-    "main.js.map": "/Spotify-Jamming/static/js/main.8abd7169.chunk.js.map",
-    "runtime-main.js": "/Spotify-Jamming/static/js/runtime-main.62bd85c6.js",
-    "runtime-main.js.map": "/Spotify-Jamming/static/js/runtime-main.62bd85c6.js.map",
-    "static/js/2.760ad2cd.chunk.js": "/Spotify-Jamming/static/js/2.760ad2cd.chunk.js",
-    "static/js/2.760ad2cd.chunk.js.map": "/Spotify-Jamming/static/js/2.760ad2cd.chunk.js.map",
-    "static/js/3.91ec7a45.chunk.js": "/Spotify-Jamming/static/js/3.91ec7a45.chunk.js",
-    "static/js/3.91ec7a45.chunk.js.map": "/Spotify-Jamming/static/js/3.91ec7a45.chunk.js.map",
-    "index.html": "/Spotify-Jamming/index.html",
-    "static/css/main.e8b247e9.chunk.css.map": "/Spotify-Jamming/static/css/main.e8b247e9.chunk.css.map",
-    "static/js/2.760ad2cd.chunk.js.LICENSE.txt": "/Spotify-Jamming/static/js/2.760ad2cd.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/Spotify-Jamming/static/media/background_photo_desktop.fe3a0bed.jpg",
-    "static/media/logo.6ce24c58.svg": "/Spotify-Jamming/static/media/logo.6ce24c58.svg"
+    "main.css": "/static/css/main.0d932dcb.chunk.css",
+    "main.js": "/static/js/main.12a52064.chunk.js",
+    "main.js.map": "/static/js/main.12a52064.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.42b02567.js",
+    "runtime-main.js.map": "/static/js/runtime-main.42b02567.js.map",
+    "static/js/2.760ad2cd.chunk.js": "/static/js/2.760ad2cd.chunk.js",
+    "static/js/2.760ad2cd.chunk.js.map": "/static/js/2.760ad2cd.chunk.js.map",
+    "static/js/3.91ec7a45.chunk.js": "/static/js/3.91ec7a45.chunk.js",
+    "static/js/3.91ec7a45.chunk.js.map": "/static/js/3.91ec7a45.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.0d932dcb.chunk.css.map": "/static/css/main.0d932dcb.chunk.css.map",
+    "static/js/2.760ad2cd.chunk.js.LICENSE.txt": "/static/js/2.760ad2cd.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/static/media/background_photo_desktop.fe3a0bed.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.62bd85c6.js",
+    "static/js/runtime-main.42b02567.js",
     "static/js/2.760ad2cd.chunk.js",
-    "static/css/main.e8b247e9.chunk.css",
-    "static/js/main.8abd7169.chunk.js"
+    "static/css/main.0d932dcb.chunk.css",
+    "static/js/main.12a52064.chunk.js"
   ]
 }
