@@ -1,5 +1,5 @@
 const clientId = process.env.REACT_APP_CLIENT_ID; // Insert client ID here.
-const redirectUri = 'http://localhost:3000/'; // Have to add this to your accepted Spotify redirect URIs on the Spotify API.
+const redirectUri = 'https://hoybaby.github.io/Spotify-Jamming/'; // Have to add this to your accepted Spotify redirect URIs on the Spotify API.
 let accessToken;
 
 const Spotify = {
